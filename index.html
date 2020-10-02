@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Encontro síncrono 6</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Renata Oliveira" />
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies.css" rel="stylesheet" />
+    <link href="libs/remark-css/rladies-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Encontro síncrono 6
+## Ensino Remoto Emergencial
+### Renata Oliveira
+### CEFET-MG
+### 02/10/2020 (updated: 2020-11-06)
+
+---
+
+
+
+
+class: inverse, center, middle
+
+# ANÁLISE ESPACIAL
+
+---
+## Operações acessórias à geocodificação
+
++ Edição de feições - complemento `NumericalDigitize`
++ Adicionar camada de pontos com coordenadas
++ Adicionar basemap
++ Adicionar coordenadas a um `shapefile` 
+
+---
+# O que representar
+### Entidades realmente existentes (visíveis); Exemplos: edificações, ruas.
+
+### Conceitos abstratos (invisíveis): exclusão/inclusão social, violência, pobreza/riqueza, desigualdade
+
+#### Inclui transformações, manipulações e métodos que podem ser aplicados aos dados geográficos para adicionar valor a eles, apoiar decisões e revelar padrões e anomalias que não são óbvios à primeira vista. 
+
+#### Tomada de decisão
+
+---
+# Visualização de fenômenos sociais no espaço
+
+### Mapas coropléticos
+
+&lt;img src="./img/coropl.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+# Visualização de fenômenos sociais no espaço
+
+### Mapas de pontos
+
+&lt;img src="./img/pontos.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+# Visualização de fenômenos sociais no espaço
+
+### Representação de fluxos
+&lt;img src="./img/fluxos.png" width="50%" style="display: block; margin: auto;" /&gt;
+---
+
+# Visualização de fenômenos sociais no espaço
+
+### Mapas de calor
+
+&lt;img src="./img/calor.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Visualização de fenômenos sociais no espaço
+
+### Cartogramas
+&lt;img src="./img/1_cartograma.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+# Visualização de fenômenos sociais no espaço
+
+### Símbolos proporcionais
+
+&lt;img src="./img/pontos_propo.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Operações geográficas com dados vetoriais
+
+### Agregação (Dissolve)
++ Elimina divisões indesejáveis considerando os valores de atributos.
+
+&lt;img src="./img/1_agregacao.png" width="60%" style="display: block; margin: auto;" /&gt;
+---
+# Operações geográficas com dados vetoriais
+
+### União (Merge)
++ Combina layers diferentes
+
+&lt;img src="./img/2_uniao.png" width="55%" style="display: block; margin: auto;" /&gt;
+---
+# Operações geográficas com dados vetoriais
+
+### Interseção (Intersect)
++ Interseção - atributos de todas as feições estarão no arquivo de saída considerando a sobreposição 
+
+&lt;img src="./img/4_intersecao.png" width="55%" style="display: block; margin: auto;" /&gt;
+---
+# Operações geográficas com dados vetoriais
+
+### Recortar (clip)
++ Recortar - somente atributos das feições de entrada estarão no arquivo de saída
+
+&lt;img src="./img/cortar_1.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+# Operações geográficas com dados vetoriais
+
+### Diferença
++ É o inverso da interseção
+
+&lt;img src="./img/5_diferenca.png" width="60%" style="display: block; margin: auto;" /&gt;
+---
+# Operações geográficas com dados vetoriais
+
+### Atribuir dado por localização
+&lt;img src="./img/dados.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+---
+# Operações geográficas com dados vetoriais
+
+### Junção relacional
++ Junção relacional: combina o conteúdo de duas tabelas usando uma chave comum - **NÃO É ESPACIAL!**
+
+&lt;img src="./img/bd_relacional.png" width="55%" style="display: block; margin: auto;" /&gt;
+---
+# Operações geográficas com dados vetoriais
+
+### Junção espacial
++ Operação ponto em polígono: compara as propriedades dos pontos com as das áreas onde estão contidos.
+
++ Sobreposição de feições: permite determinar se duas áreas se sobrepõe, determinar a área de sobreposição e definir a área formada pela sobreposição.
+
+&lt;img src="./img/spatial_join.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Dados Matriciais
+
+Operações de sobreposição são mais simples. Atributos de diferentes matrizes podem ser combinados por meio de álgebra de mapas. 
+
+&lt;img src="./img/raster.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+# Dados Matriciais
+
+&lt;img src="./img/raster_vec.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+# Dados Matriciais
+
+&lt;img src="./img/Vector-Raster.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+
+---
+# Qual utilizar?
+
+&lt;img src="./img/raster_vector.gif" width="90%" style="display: block; margin: auto;" /&gt;
+
+
+---
+# Proximidade x similaridade
+
+&lt;img src="./img/simi_prox.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+# Padrões espaciais
+
+.pull-left[
+&lt;img src="./img/padroes_pontos.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="./img/padroes_areas.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+# Medidas centrográficas
+
+&lt;img src="./img/Imagem1.png" width="70%" style="display: block; margin: auto;" /&gt;
+---
+
+# Medidas centrográficas
+
+### Centro Médio
+
+.pull-left[
+&lt;img src="./img/mc3.jpeg" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="./img/meancenter_stat.gif" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+# Medidas centrográficas
+
+### Distância Padrão
+
+.pull-left[
+&lt;img src="./img/Imagem2.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="./img/Imagem3.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+# Medidas centrográficas
+
+### Aplicações
+
+.pull-left[
+&lt;img src="./img/india2.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="./img/india.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+---
+
+# Medidas centrográficas
+
+### Aplicações
+
+.pull-left[
+&lt;img src="./img/india 2.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right[
+&lt;img src="./img/india3.png" width="100%" style="display: block; margin: auto;" /&gt;
+]
+---
+
+# Medidas centrográficas no R
+.pull-left[
+
+```r
+library(aspace)
+library(sf)
+library(tmap)
+library(cluster)
+library(geosphere)
+library(sp)
+
+data &lt;- read_sf("D:/OneDrive - cefetmg.br/01_disciplinas/ERE/gis/02_pratica/dados_espaciais/ESCOLAS_PARTICULARES/ESCOLAS_PARTICULARES.shp")
+bh &lt;- read_sf("D:/OneDrive - cefetmg.br/01_disciplinas/ERE/gis/02_pratica/dados_espaciais/BAIRRO/BAIRRO.shp")
+
+data_sp &lt;- as_Spatial(data)
+```
+]
+
+.pull-right[
+
+```r
+tm_shape(data) +
+   tm_dots("ID_EQ_ED", size = 1.5) +
+tm_shape(bh) +
+   tm_borders(col = "grey40", lwd = 1, lty = "solid", alpha = NA)
+```
+
+![](index_files/figure-html/unnamed-chunk-32-1.png)&lt;!-- --&gt;
+
+```r
+#plot(data_sp)
+```
+]
+
+---
+
+# Plotar pontos a partir de coordenadas
+
+
+```r
+xy &lt;- st_coordinates(data) # arquivo para calculos centrográficos
+
+xy_coord &lt;- as.data.frame(st_coordinates(data)) %&gt;%
+   st_as_sf(coords = c('X', 'Y'), crs = 31983) # conversão em sf para representação espacial de coordenadas como pontos
+```
+
+.center[
+
+```r
+tm_shape(data) +
+   tm_dots("ID_EQ_ED")
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-34-1.png" width="300px" /&gt;
+]
+---
+# Plotar pontos a partir de coordenadas
+
+.pull-left[
+
+```r
+tm_shape(xy_coord) +
+      tm_dots(col="red")
+```
+
+![](index_files/figure-html/unnamed-chunk-35-1.png)&lt;!-- --&gt;
+]
+
+.pull-right[
+
+```r
+tm_shape(data) + 
+   tm_bubbles("NUMERO", col="blue", alpha = 0.5) + # Considerando os números como número de alunos matriculados
+tm_shape(bh) +
+   tm_borders(col = "grey40", lwd = 1, lty = "solid", alpha = NA)
+```
+
+![](index_files/figure-html/unnamed-chunk-36-1.png)&lt;!-- --&gt;
+]
+
+---
+# Centro Médio e distância padrão
+.pull-left[
+
+```r
+mc &lt;- mean_centre(id="ID_EQ_ED", filename="mean_center.txt", weighted=FALSE, weights=NULL, points=xy)
+```
+
+```
+##         id CENTRE.x CENTRE.y
+## 1 ID_EQ_ED 608666.9  7799097
+```
+]
+
+.pull-right[
+
+```r
+mc_sd &lt;- calc_sdd(id=1, filename="SDD_Output.txt", centre.xy=NULL, calccentre=TRUE, weighted=FALSE, weights=NULL, points=xy, verbose=FALSE) 
+```
+
+```
+## $id
+## [1] 1
+## 
+## $calccentre
+## [1] TRUE
+## 
+## $weighted
+## [1] FALSE
+## 
+## $CENTRE.x
+## [1] 608666.9
+## 
+## $CENTRE.y
+## [1] 7799097
+## 
+## $SDD.radius
+## [1] 6956.965
+## 
+## $SDD.area
+## [1] 152051081
+```
+
+```r
+# usar xy - Retorna um dataframe com o centro médio e a distância padrão - raio.
+```
+]
+
+---
+# Centro Médio e distância padrão
+
+[Documentação](https://rdrr.io/cran/aspace/man/plot_sdd.html)
+.center[
+
+```r
+plot_sdd(plotnew=TRUE, plothv=FALSE, plotweightedpts=FALSE, plotpoints=TRUE, plotcentre=TRUE, titletxt="Title", points.col = "red", xaxis="Easting (m)", yaxis="Northing (m)", centre.col="blue", centre.pch = 3)
+```
+
+&lt;img src="index_files/figure-html/unnamed-chunk-39-1.png" width="400px" /&gt;
+]
+
+
+---
+# Centro Médio e Distância Padrão ponderados
+
+
+```r
+wtc &lt;- function(g,w){
+  if (!(is(g,"sf")) | !(w %in% colnames(g))){
+    stop(paste("requires an sf object with at a column",w))
+  }
+  centers = st_coordinates(st_centroid(st_geometry(g)))
+  # crsx = st_crs(g) how could i reuse the CRS of g? do i need that?
+  out = st_point(c(weighted.mean(centers[,"X"],g[[w]]), weighted.mean(centers[,"Y"],g[[w]])))
+  return(out)
+}
+```
+---
+# Centro Médio e Distância Padrão ponderados
+.center[
+
+```r
+plot(st_geometry(data))
+plot(st_centroid(st_union(data)),col="red",pch=3,add=TRUE, lwd=2)
+plot(wtc(data,"NUMERO"),col="blue",pch=3,add=TRUE, lwd=2)
+```
+
+![](index_files/figure-html/unnamed-chunk-41-1.png)&lt;!-- --&gt;
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
